@@ -2,7 +2,7 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "There must be a description, but there is no it"
-authors = "herovnik"
+authors = ["herovnik"]
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [

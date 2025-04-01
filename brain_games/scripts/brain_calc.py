@@ -2,7 +2,7 @@ import random
 import prompt
 import sys
 sys.path.append("/home/nikon/test/project-1/python-project-49/brain_games/")
-import cli
+import brain_games.cli
 
 #def initialize():
     
@@ -36,7 +36,7 @@ def count_answers(name):
 
 def main():
     #initialize()
-    count_answers(cli.welcome_user())
+    count_answers(brain_games.cli.welcome_user())
 
 if __name__ == "__main__":
     main()

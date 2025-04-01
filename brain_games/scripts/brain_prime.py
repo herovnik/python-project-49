@@ -15,7 +15,7 @@ def init_quest(count):
     print(f'Question: {count}')
 
 def count_answers(name):
-    print('Answer "yes" if given number is prime. Otherwise answer "no"')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     corrects = 0
     while corrects < 3:
         count = get_count()

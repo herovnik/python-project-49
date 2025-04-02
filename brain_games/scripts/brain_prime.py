@@ -3,7 +3,20 @@ import prompt
 import sys
 sys.path.append("/home/nikon/test/project-1/python-project-49/brain_games/")
 import brain_games.cli
-import sympy
+import math
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    limit = int(math.sqrt(n)) + 1
+    for i in range(3, limit, 2):
+        if n % i == 0:
+            return False
+    return True
 
 #def initialize():
     
@@ -21,18 +34,18 @@ def count_answers(name):
         count = get_count()
         init_quest(count)
         answer = prompt.string('Your answer: ')  
-        if answer.lower() == 'no' and sympy.isprime(count) is False:
+        if answer.lower() == 'no' and is_prime(count) is False:
             corrects += 1
             print('Correct!')
-        elif answer.lower() == 'yes' and sympy.isprime(count) is True:
+        elif answer.lower() == 'yes' and is_prime(count) is True:
             corrects += 1
             print('Correct!')
-        elif answer.lower() != 'yes' and sympy.isprime(count) is True:
+        elif answer.lower() != 'yes' and is_prime(count) is True:
             corrects = 1
             print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
-        elif answer.lower() != 'no' and sympy.isprime(count) is False:
+        elif answer.lower() != 'no' and is_prime(count) is False:
             corrects = 1
             print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
             print(f"Let's try again, {name}!")

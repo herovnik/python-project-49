@@ -1,18 +1,22 @@
-import random
-import prompt
 import math
+import random
 import sys
+
+import prompt
+
 sys.path.append("/home/nikon/test/project-1/python-project-49/brain_games/")
 import brain_games.cli
 
-#def initialize():
+# def initialize():
     
 
 def get_count():
     return [random.randint(0, 100), random.randint(0, 100)]
 
+
 def init_quest(count):
     print(f'Question: {count[0]} {count[1]}')
+
 
 def count_answers(name):
     print('Find the greatest common divisor of given numbers.')
@@ -27,15 +31,18 @@ def count_answers(name):
             print('Correct!')
         else:
             corrects = 1
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was \
+            '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             break
     if corrects == 3:
         print(f'Congratulations, {name}!')
 
+
 def main():
-    #initialize()
+    # initialize()
     count_answers(brain_games.cli.welcome_user())
+
 
 if __name__ == "__main__":
     main()

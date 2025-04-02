@@ -1,10 +1,12 @@
 import random
-import prompt
 import sys
+
+import prompt
+
 sys.path.append("/home/nikon/test/project-1/python-project-49/brain_games/")
 import brain_games.cli
 
-#def initialize():
+# def initialize():
     
 
 def get_expression():
@@ -14,8 +16,10 @@ def get_expression():
     opers = ['+', '-', '*']
     return f'{str(a)} {opers[oper]} {str(b)}'
 
+
 def init_quest(expression):
     print(f'Question: {expression}')
+
 
 def count_answers(name):
     print('What is the result of the expression?')
@@ -30,15 +34,18 @@ def count_answers(name):
             print('Correct!')
         else:
             corrects = 1
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{right_answer}'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was \
+             '{right_answer}'.")
             print(f"Let's try again, {name}!")
             break
     if corrects == 3:
         print(f'Congratulations, {name}!')
 
+
 def main():
-    #initialize()
+    # initialize()
     count_answers(brain_games.cli.welcome_user())
+
 
 if __name__ == "__main__":
     main()

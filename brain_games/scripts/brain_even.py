@@ -1,17 +1,21 @@
 import random
-import prompt
 import sys
+
+import prompt
+
 sys.path.append("/home/nikon/test/project-1/python-project-49/brain_games/")
 import brain_games.cli
 
-#def initialize():
+# def initialize():
     
 
 def get_count():
     return random.randint(0, 100)
 
+
 def init_quest(count):
     print(f'Question: {count}')
+
 
 def count_answers(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -39,9 +43,11 @@ def count_answers(name):
     if corrects == 3:
         print(f'Congratulations, {name}!')
 
+
 def main():
-    #initialize()
+    # initialize()
     count_answers(brain_games.cli.welcome_user())
+
 
 if __name__ == "__main__":
     main()

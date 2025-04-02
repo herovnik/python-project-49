@@ -20,7 +20,7 @@ def get_progression():
     return [progression, missing]
 
 def init_quest(progression):
-    prog = ', '.join(progression)
+    prog = ' '.join(progression)
     print(f'Question: {prog}')
 
 def count_answers(name):

@@ -27,15 +27,17 @@ def count_answers(name):
             corrects += 1
             print('Correct!')
         elif answer.lower() != 'yes' and count % 2 == 0:
-            corrects = 3
+            corrects = 1
             print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"let's try again, {name}!")
+            break
         elif answer.lower() != 'no' and count % 2 != 0:
-            corrects = 3
+            corrects = 1
             print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
             print(f"let's try again, {name}!")
             break
-    print(f'Congratulations, {name}!')
+    if corrects == 3:
+        print(f'Congratulations, {name}!')
 
 def main():
     #initialize()

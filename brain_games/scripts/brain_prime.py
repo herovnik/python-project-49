@@ -31,10 +31,12 @@ def count_answers(name):
             corrects = 3
             print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"let's try again, {name}!")
+            break
         elif answer.lower() != 'no' and sympy.isprime(count) is False:
             corrects = 3
             print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
             print(f"let's try again, {name}!")
+            break
     print(f'Congratulations, {name}!')
 
 def main():

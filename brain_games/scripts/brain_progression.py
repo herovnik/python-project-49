@@ -40,6 +40,7 @@ def count_answers(name):
             corrects = 3
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{missing}'.")
             print(f"let's try again, {name}!")
+            break
     print(f'Congratulations, {name}!')
 
 def main():
